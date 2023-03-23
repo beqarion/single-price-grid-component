@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* font-family: 'Karla', sans-serif; */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary colors */
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  /* neutral colors */
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  --FF: "Karla", sans-serif;
+
+  --transition: 0.3s ease-in-out all;
+}
+body {
+  font-family: var(--FF);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-gray);
+}
+button {
+  border: none;
+  color: inherit;
+}
+
+.price-grid-card {
+  max-width: 311px;
+  background: #ffffff;
+  box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
+  border-radius: 5px;
+}
+.section {
+  padding: 1.5rem;
+}
+
+/* 
+==========
+Header Section
+==========
+*/
+.price-grid-title {
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.25px;
+}
+.price-grid-subtitle {
+  color: var(--bright-yellow);
+  margin-bottom: 1rem;
+
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.1875px;
+}
+.price-grid-text {
+  color: var(--grayish-blue);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: -0.175px;
+}
+/* 
+==========
+Pricing Section
+==========
+*/
+.price-section {
+  background: var(--cyan);
+  color: white;
+}
+.section-title {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.225px;
+  margin-bottom: 18px;
+}
+
+/* price-container */
+.price-container {
+  margin-bottom: 26px;
+}
+.monthly-price {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 0.25rem;
+}
+.price-value {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: -0.4px;
+}
+.time-period {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+.price-daily {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+/* button */
+.price-section-btn {
+  display: inline-block;
+  width: 100%;
+  background: var(--bright-yellow);
+  padding-top: 15px;
+  padding-bottom: 14px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
+  border-radius: 5px;
+  /* text style */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.2px;
+}
