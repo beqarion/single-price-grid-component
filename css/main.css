@@ -45,6 +45,7 @@ button {
   color: inherit;
 }
 
+/* ======== */
 .price-grid-card {
   max-width: 311px;
   background: #ffffff;
@@ -54,7 +55,30 @@ button {
 .section {
   padding: 1.5rem;
 }
-
+@media screen and (min-width: 768px) {
+  .price-grid-card {
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "section-1 section-2";
+    max-width: 635px;
+    overflow: hidden;
+  }
+  .section {
+    padding: 2.5rem;
+  }
+  .header {
+    grid-area: header;
+  }
+  .price-section {
+    grid-area: section-1;
+  }
+  .features-section {
+    grid-area: section-2;
+  }
+}
 /* 
 ==========
 Header Section
@@ -141,4 +165,36 @@ Pricing Section
   font-size: 16px;
   line-height: 19px;
   letter-spacing: -0.2px;
+}
+/* 
+==========
+Features
+==========
+*/
+.features-section {
+  background: var(--cyan);
+  position: relative;
+  color: white;
+}
+.features-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+.features p {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.175px;
 }
